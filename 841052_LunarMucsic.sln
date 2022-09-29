@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "841052_LunarMucsic", "841052_LunarMucsic\841052_LunarMucsic.csproj", "{DEEB187C-532A-4DA4-8FA0-00393ED4EAEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEEB187C-532A-4DA4-8FA0-00393ED4EAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEB187C-532A-4DA4-8FA0-00393ED4EAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEB187C-532A-4DA4-8FA0-00393ED4EAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEB187C-532A-4DA4-8FA0-00393ED4EAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1EF398F-F2C3-4770-A5F3-E678853B47FF}
+	EndGlobalSection
+EndGlobal
