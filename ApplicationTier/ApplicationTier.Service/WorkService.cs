@@ -20,7 +20,6 @@ namespace ApplicationTier.Service
         public async Task<IList<Work>> GetAll()
         {
             return (IList<Work>)await _unitOfWork.Repository<Work>().GetAllAsync();
-            //return await _unitOfWork.Repository<Work>().GetAllAsync();
         }
 
         public async Task<Work> GetOne(int workId)
