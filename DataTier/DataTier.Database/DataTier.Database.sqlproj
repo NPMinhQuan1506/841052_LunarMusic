@@ -80,6 +80,7 @@
     <Build Include="Tables\MusLunar_Customer.sql" />
     <Build Include="Tables\MusLunar_CustomerGroup.sql" />
     <Build Include="Tables\FKTable.sql" />
+    <Build Include="Tables\MusLunar_Music_Origin.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
