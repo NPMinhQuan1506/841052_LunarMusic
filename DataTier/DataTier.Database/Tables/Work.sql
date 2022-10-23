@@ -1,6 +1,0 @@
-﻿CREATE TABLE [dbo].[Work]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [Name] NVARCHAR(50) NULL, 
-    [Description] NVARCHAR(250) NULL
-)

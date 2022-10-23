@@ -17,6 +17,25 @@ namespace ApplicationTier.Infrastructure
         private IDbContextTransaction _transaction;
         private IsolationLevel? _isolationLevel;
 
+        public IRepository<TEntity> Repository<TEntity>() where TEntity : class
+        {
+            var type = typeof(TEntity);
+            var typeName = type.Name;
+
+            lock (Repositories)
+            {
+                if (Repositories.ContainsKey(typeName))
+                {
+                    return (IRepository<TEntity>)Repositories[typeName];
+                }
+
+                var repository = new Repository<TEntity>(DbContext);
+
+                Repositories.Add(typeName, repository);
+                return repository;
+            }
+        }
+
         public UnitOfWork(DbFactory dbFactory)
         {
             DbContext = dbFactory.DbContext;
@@ -85,23 +104,5 @@ namespace ApplicationTier.Infrastructure
             DbContext = null;
         }
 
-        public IRepository<TEntity> Repository<TEntity>() where TEntity : class
-        {
-            var type = typeof(TEntity);
-            var typeName = type.Name;
-
-            lock (Repositories)
-            {
-                if (Repositories.ContainsKey(typeName))
-                {
-                    return (IRepository<TEntity>)Repositories[typeName];
-                }
-
-                var repository = new Repository<TEntity>(DbContext);
-
-                Repositories.Add(typeName, repository);
-                return repository;
-            }
-        }
     }
 }

@@ -11,12 +11,50 @@ namespace ApplicationTier.Infrastructure
     public class Repository<T> : IRepository<T> where T : class
     {
         public DbSet<T> Entities => DbContext.Set<T>();
+
         public DbContext DbContext { get; private set; }
 
         public Repository(DbContext dbContext)
         {
             DbContext = dbContext;
         }
+
+        public async Task<IList<T>> GetAllAsync()
+        {
+            return await Entities.ToListAsync();
+        }
+
+
+        public T Find(params object[] keyValues)
+        {
+            return Entities.Find(keyValues);
+        }
+
+        public virtual async Task<T> FindAsync(params object[] keyValues)
+        {
+            return await Entities.FindAsync(keyValues);
+        }
+
+        public async Task InsertAsync(T entity, bool saveChanges = true)
+        {
+            await Entities.AddAsync(entity);
+
+            if (saveChanges)
+            {
+                await DbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task InsertRangeAsync(IEnumerable<T> entities, bool saveChanges = true)
+        {
+            await DbContext.AddRangeAsync(entities);
+
+            if (saveChanges)
+            {
+                await DbContext.SaveChangesAsync();
+            }
+        }
+
         public async Task DeleteAsync(int id, bool saveChanges = true)
         {
             var entity = await Entities.FindAsync(id);
@@ -51,39 +89,5 @@ namespace ApplicationTier.Infrastructure
             }
         }
 
-        public async Task<IList<T>> GetAllAsync()
-        {
-            return await Entities.ToListAsync();
-        }
-
-        public T Find(params object[] keyValues)
-        {
-            return Entities.Find(keyValues);
-        }
-
-        public virtual async Task<T> FindAsync(params object[] keyValues)
-        {
-            return await Entities.FindAsync(keyValues);
-        }
-
-        public async Task InsertAsync(T entity, bool saveChanges = true)
-        {
-            await Entities.AddAsync(entity);
-
-            if (saveChanges)
-            {
-                await DbContext.SaveChangesAsync();
-            }
-        }
-
-        public async Task InsertRangeAsync(IEnumerable<T> entities, bool saveChanges = true)
-        {
-            await DbContext.AddRangeAsync(entities);
-
-            if (saveChanges)
-            {
-                await DbContext.SaveChangesAsync();
-            }
-        }
     }
 }

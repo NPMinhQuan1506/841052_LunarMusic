@@ -1,0 +1,118 @@
+﻿--ALTER TABLE [dbo].[MusLunar_Pararameter]
+--	ADD CONSTRAINT [FK_MusLunar_Pararameter_To_MusLunar_Pararameter_Type]
+--	FOREIGN KEY (ParaTypeID)
+--	REFERENCES [MusLunar_Pararameter_Type] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_Author]
+--	ADD CONSTRAINT [FK_MusLunar_Author_To_MusLunar_Pararameter]
+--	FOREIGN KEY (GenderID)
+--	REFERENCES [MusLunar_Pararameter] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_Singer]
+--	ADD CONSTRAINT [FK_MusLunar_Singer_To_MusLunar_Pararameter]
+--	FOREIGN KEY (GenderID)
+--	REFERENCES [MusLunar_Pararameter] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_Song]
+--	ADD CONSTRAINT [FK_MusLunar_Song_To_MusLunar_Music_Genres]
+--	FOREIGN KEY (GenresID)
+--	REFERENCES [MusLunar_Music_Genres] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--    CONSTRAINT [FK_MusLunar_Song_To_MusLunar_Author]
+--	FOREIGN KEY (AuthorID)
+--	REFERENCES [MusLunar_Author] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--    CONSTRAINT [FK_MusLunar_Song_To_MusLunar_Singer]
+--	FOREIGN KEY (SingerID)
+--	REFERENCES [MusLunar_Singer] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--    CONSTRAINT [FK_MusLunar_Song_To_MusLunar_SongGroup]
+--	FOREIGN KEY (GroupID)
+--	REFERENCES [MusLunar_SongGroup] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_Employee]
+--	ADD CONSTRAINT [FK_MusLunar_Employee_To_MusLunar_Pararameter]
+--	FOREIGN KEY (GenderID)
+--	REFERENCES [MusLunar_Pararameter] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_CustomerPlaylist]
+--	ADD CONSTRAINT [FK_MusLunar_CustomerPlaylist_To_MusLunar_Customer]
+--	FOREIGN KEY (CustomerID)
+--	REFERENCES [MusLunar_Customer] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--	CONSTRAINT [FK_MusLunar_CustomerPlaylist_To_MusLunar_Song]
+--	FOREIGN KEY (SongID)
+--	REFERENCES [MusLunar_Song] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_Order]
+--	ADD CONSTRAINT [FK_MusLunar_Order_To_MusLunar_Customer]
+--	FOREIGN KEY (CustomerID)
+--	REFERENCES [MusLunar_Customer] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_OrderDetail]
+--	ADD CONSTRAINT [FK_MusLunar_OrderDetail_To_MusLunar_Order]
+--	FOREIGN KEY (OrderID)
+--	REFERENCES [MusLunar_Order] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--	CONSTRAINT [FK_MusLunar_OrderDetail_To_MusLunar_Song]
+--	FOREIGN KEY (SongID)
+--	REFERENCES [MusLunar_Song] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--	CONSTRAINT [FK_MusLunar_OrderDetail_To_MusLunar_Pararameter]
+--	FOREIGN KEY (PaymentMethodID)
+--	REFERENCES [MusLunar_Pararameter] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_User]
+--	ADD CONSTRAINT [FK_MusLunar_User_To_MusLunar_Employee]
+--	FOREIGN KEY (EmployeeID)
+--	REFERENCES [MusLunar_Employee] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_Customer]
+--	ADD CONSTRAINT [FK_MusLunar_Customer_To_MusLunar_Pararameter]
+--	FOREIGN KEY (GenderID)
+--	REFERENCES [MusLunar_Pararameter] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE,
+
+--	CONSTRAINT [FK_MMusLunar_Customer_To_MusLunar_CustomerGroup]
+--	FOREIGN KEY (GroupID)
+--	REFERENCES [MusLunar_CustomerGroup] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;
+--GO
+--ALTER TABLE [dbo].[MusLunar_CustomerUser]
+--	ADD CONSTRAINT [FK_MusLunar_CustomerUser_To_MusLunar_Customer]
+--	FOREIGN KEY (CustomerID)
+--	REFERENCES [MusLunar_Customer] (ID)
+--	ON DELETE NO ACTION
+--    ON UPDATE CASCADE;

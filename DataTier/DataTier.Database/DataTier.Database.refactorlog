@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="dce0ea01-c4ea-46c4-a784-d02ec175b582" ChangeDateTime="10/23/2022 07:18:45">
+    <Property Name="ElementName" Value="[dbo].[Table1].[C]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table1]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedBy" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5c2f802c-f7ef-4f23-b971-605591e60c85" ChangeDateTime="10/23/2022 07:26:01">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Pararameter].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Pararameter]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bf6e8c7f-5d3c-4d13-a73d-1ef9cfda6a7a" ChangeDateTime="10/23/2022 07:36:17">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Singer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Singer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a046b63-2f64-45f4-9d09-63c7cf666f5c" ChangeDateTime="10/23/2022 07:51:29">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Singer].[Phine]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Singer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Phone" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a3af2fa-c531-4675-9db5-cf66aaa37c1b" ChangeDateTime="10/23/2022 07:59:44">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Music_Genres].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Music_Genres]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2e02318d-bdb2-4db2-ab9a-b4fb42601af8" ChangeDateTime="10/23/2022 08:01:27">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Author].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Author]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="30d8a70d-1106-4155-9dc5-17a556fba484" ChangeDateTime="10/23/2022 09:09:45">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_SongGroup].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_SongGroup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa8f70d6-6d02-498d-8eae-b72b78389abe" ChangeDateTime="10/23/2022 09:17:34">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Song].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Song]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4dd2f0b4-66ad-453e-ac53-525c1738d3f6" ChangeDateTime="10/23/2022 09:25:19">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Employee].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Employee]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7f3a1690-daa9-4655-97cc-23ba89228010" ChangeDateTime="10/23/2022 09:26:09">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Employee].[LátName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Employee]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LastName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cdc492d8-56c6-4f6c-8383-267408f6c2f4" ChangeDateTime="10/23/2022 09:30:17">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_CustomerPlaylist].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_CustomerPlaylist]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="27aa8e25-9494-4b46-9c05-5f3f7c3700ac" ChangeDateTime="10/23/2022 09:31:04">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_CustomerPlaylist].[LastListeningTIme]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_CustomerPlaylist]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LastListeningTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="59589d69-da46-469b-ac3b-22d4b2aca89d" ChangeDateTime="10/23/2022 09:31:42">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_CustomerPlaylist].[Created]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_CustomerPlaylist]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Note" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="75612e94-760a-40ae-8232-b33868184754" ChangeDateTime="10/23/2022 09:34:40">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_Order].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8b3a18f5-1d45-4366-bc32-e2ac5e499d97" ChangeDateTime="10/23/2022 09:37:00">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_OrderDetail].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_OrderDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9224d934-fce4-4759-8ace-62046916768d" ChangeDateTime="10/23/2022 09:38:21">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_OrderDetail].[Modifed]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_OrderDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Modified" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e0205de5-ae6a-45ec-a1c7-aae5bcb0eab4" ChangeDateTime="10/23/2022 09:39:59">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_User].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c4f3d2a2-e4c4-4fd0-b8e7-ff7bd400fb14" ChangeDateTime="10/23/2022 09:43:04">
+    <Property Name="ElementName" Value="[dbo].[MusLunar_CustomerUser].[EmployeeID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MusLunar_CustomerUser]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CustomerID" />
+  </Operation>
+</Operations>

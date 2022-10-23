@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationTier.Infrastructure.Repositories;
 
 namespace ApplicationTier.Service
 {
@@ -19,7 +20,8 @@ namespace ApplicationTier.Service
 
         public async Task<IList<Work>> GetAll()
         {
-            return (IList<Work>)await _unitOfWork.Repository<Work>().GetAllAsync();
+            //return (IList<Work>)await _unitOfWork.Repository<Work>().GetAllAsync();
+            return await WorkRepository.GetAll(_unitOfWork.Repository<Work>());
         }
 
         public async Task<Work> GetOne(int workId)

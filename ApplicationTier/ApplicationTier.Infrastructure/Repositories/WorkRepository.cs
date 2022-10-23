@@ -24,6 +24,7 @@ namespace ApplicationTier.Infrastructure.Repositories
             //SqlParameter demoPara = new SqlParameter();
 
             //demoPara.ParameterName = "@pId"; // Defining Name  
+            //demoPara.Value = 1;
             //demoPara.SqlDbType = SqlDbType.Int; // Defining DataType  
             //demoPara.Direction = ParameterDirection.Input;
             await repository.DbContext.LoadStoredProc("spGetWorks")
