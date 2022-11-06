@@ -21,6 +21,7 @@ namespace ApplicationTier.Infrastructure
 
         public async Task<IList<T>> GetAllAsync()
         {
+            //var x = await Entities.ToListAsync();
             return await Entities.ToListAsync();
         }
 

@@ -7,7 +7,7 @@ namespace ApplicationTier.Domain.Entities
     {
         public MusLunarMusicGenre()
         {
-            MusLunarSongs = new HashSet<MusLunarSong>();
+            //MusLunarSongs = new HashSet<MusLunarSong>();
         }
 
         public int Id { get; set; }
@@ -19,6 +19,6 @@ namespace ApplicationTier.Domain.Entities
         public int? ModifiedBy { get; set; }
         public int? State { get; set; }
 
-        public virtual ICollection<MusLunarSong> MusLunarSongs { get; set; }
+        //public virtual ICollection<MusLunarSong> MusLunarSongs { get; set; }
     }
 }

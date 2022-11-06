@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ApplicationTier.Domain.Entities
 {
@@ -7,7 +8,7 @@ namespace ApplicationTier.Domain.Entities
     {
         public MusLunarSinger()
         {
-            MusLunarSongs = new HashSet<MusLunarSong>();
+            //MusLunarSongs = new HashSet<MusLunarSong>();
         }
 
         public int Id { get; set; }
@@ -27,8 +28,8 @@ namespace ApplicationTier.Domain.Entities
         public DateTime Modified { get; set; }
         public int ModifiedBy { get; set; }
         public int? State { get; set; }
-
+        [JsonIgnore]
         public virtual MusLunarParameter Gender { get; set; } = null!;
-        public virtual ICollection<MusLunarSong> MusLunarSongs { get; set; }
+        //public virtual ICollection<MusLunarSong> MusLunarSongs { get; set; }
     }
 }

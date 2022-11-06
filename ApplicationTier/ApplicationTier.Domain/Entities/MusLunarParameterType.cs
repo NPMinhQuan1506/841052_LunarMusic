@@ -7,7 +7,7 @@ namespace ApplicationTier.Domain.Entities
     {
         public MusLunarParameterType()
         {
-            MusLunarParameters = new HashSet<MusLunarParameter>();
+            //MusLunarParameters = new HashSet<MusLunarParameter>();
         }
 
         public int Id { get; set; }
@@ -19,6 +19,6 @@ namespace ApplicationTier.Domain.Entities
         public int ModifiedBy { get; set; }
         public int? State { get; set; }
 
-        public virtual ICollection<MusLunarParameter> MusLunarParameters { get; set; }
+        //public virtual ICollection<MusLunarParameter> MusLunarParameters { get; set; }
     }
 }

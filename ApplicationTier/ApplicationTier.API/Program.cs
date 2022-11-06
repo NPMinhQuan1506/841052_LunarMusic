@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using AspNetCoreRateLimit;
 using ApplicationTier.API.Extensions;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,13 +72,15 @@ builder.Configuration.GetSection("AppSettings").Get<AppSettings>(options => opti
 
 builder.Services.AddDatabase().AddServices().AddCors();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+});
 
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApplicationTier.API", Version = "v1" });
 });
-
 
 var app = builder.Build();
 

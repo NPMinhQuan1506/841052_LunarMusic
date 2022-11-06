@@ -4,6 +4,7 @@ using ApplicationTier.Domain.Models;
 using ApplicationTier.Infrastructure;
 using ApplicationTier.Service;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ApplicationTier.API.Extensions
 {
@@ -39,8 +40,9 @@ namespace ApplicationTier.API.Extensions
         /// <returns></returns>
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
-            return services.AddScoped<IWorkService, WorkService>();
-                //.AddScoped<IWorkService, WorkService>();
+            return services.AddScoped<IWorkService, WorkService>()
+                           .AddScoped<ICustomerPlaylistService, CustomerPlaylistService>()
+                           .AddScoped<IParameterService, ParameterService>();
         }
 
         /// <summary>
@@ -51,9 +53,11 @@ namespace ApplicationTier.API.Extensions
         public static IServiceCollection AddCORS(this IServiceCollection services)
         {
             return // CORS
-                services.AddCors(options => {
+                services.AddCors(options =>
+                {
                     options.AddPolicy("MyCorsPolicy",
-                        builder => {
+                        builder =>
+                        {
                             builder.WithOrigins(AppSettings.CORS)
                                 .AllowAnyMethod()
                                 .AllowAnyHeader()

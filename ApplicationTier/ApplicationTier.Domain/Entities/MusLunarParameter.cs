@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ApplicationTier.Domain.Entities
 {
@@ -7,8 +8,8 @@ namespace ApplicationTier.Domain.Entities
     {
         public MusLunarParameter()
         {
-            MusLunarEmployees = new HashSet<MusLunarEmployee>();
-            MusLunarSingers = new HashSet<MusLunarSinger>();
+            //MusLunarEmployees = new HashSet<MusLunarEmployee>();
+            //MusLunarSingers = new HashSet<MusLunarSinger>();
         }
 
         public int Id { get; set; }
@@ -23,8 +24,9 @@ namespace ApplicationTier.Domain.Entities
         public int ModifiedBy { get; set; }
         public int? State { get; set; }
 
+        [JsonIgnore]
         public virtual MusLunarParameterType ParaType { get; set; } = null!;
-        public virtual ICollection<MusLunarEmployee> MusLunarEmployees { get; set; }
-        public virtual ICollection<MusLunarSinger> MusLunarSingers { get; set; }
+        //public virtual ICollection<MusLunarEmployee> MusLunarEmployees { get; set; }
+        //public virtual ICollection<MusLunarSinger> MusLunarSingers { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace ApplicationTier.Domain.Entities
 {
@@ -7,12 +8,13 @@ namespace ApplicationTier.Domain.Entities
     {
         public MusLunarCustomer()
         {
-            MusLunarCustomerPlaylists = new HashSet<MusLunarCustomerPlaylist>();
-            MusLunarCustomerUsers = new HashSet<MusLunarCustomerUser>();
-            MusLunarOrders = new HashSet<MusLunarOrder>();
+            //MusLunarCustomerPlaylists = new HashSet<MusLunarCustomerPlaylist>();
+            //MusLunarCustomerUsers = new HashSet<MusLunarCustomerUser>();
+            //MusLunarOrders = new HashSet<MusLunarOrder>();
         }
-
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Name { get; set; } = null!;
         public string NameNoSign { get; set; } = null!;
         public string? NickName { get; set; }
@@ -32,8 +34,8 @@ namespace ApplicationTier.Domain.Entities
         public int? ModifiedBy { get; set; }
         public int State { get; set; }
 
-        public virtual ICollection<MusLunarCustomerPlaylist> MusLunarCustomerPlaylists { get; set; }
-        public virtual ICollection<MusLunarCustomerUser> MusLunarCustomerUsers { get; set; }
-        public virtual ICollection<MusLunarOrder> MusLunarOrders { get; set; }
+        //public virtual ICollection<MusLunarCustomerPlaylist> MusLunarCustomerPlaylists { get; set; }
+        //public virtual ICollection<MusLunarCustomerUser> MusLunarCustomerUsers { get; set; }
+        //public virtual ICollection<MusLunarOrder> MusLunarOrders { get; set; }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace ApplicationTier.Domain.Entities
 {
@@ -7,11 +9,13 @@ namespace ApplicationTier.Domain.Entities
     {
         public MusLunarSong()
         {
-            MusLunarCustomerPlaylists = new HashSet<MusLunarCustomerPlaylist>();
+            //MusLunarCustomerPlaylists = new HashSet<MusLunarCustomerPlaylist>();
         }
-
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string Name { get; set; } = null!;
+        [DataMember]
         public string Source { get; set; } = null!;
         public int PlayTimeInt { get; set; }
         public string? Image { get; set; }
@@ -30,11 +34,15 @@ namespace ApplicationTier.Domain.Entities
         public DateTime Modified { get; set; }
         public int ModifiedBy { get; set; }
         public int? State { get; set; }
-
+        [JsonIgnore]
         public virtual MusLunarAuthor Author { get; set; } = null!;
+        [JsonIgnore]
         public virtual MusLunarMusicGenre Genres { get; set; } = null!;
+        [JsonIgnore]
         public virtual MusLunarSongGroup Group { get; set; } = null!;
+        [JsonIgnore]
         public virtual MusLunarSinger Singer { get; set; } = null!;
-        public virtual ICollection<MusLunarCustomerPlaylist> MusLunarCustomerPlaylists { get; set; }
+
+        //public virtual ICollection<MusLunarCustomerPlaylist> MusLunarCustomerPlaylists { get; set; }
     }
 }
