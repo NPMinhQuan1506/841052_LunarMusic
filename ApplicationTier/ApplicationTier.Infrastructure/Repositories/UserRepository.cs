@@ -13,35 +13,35 @@ using System.Threading.Tasks;
 
 namespace ApplicationTier.Infrastructure.Repositories
 {
-    public static class WorkRepository
+    public static class UserRepository
     {
         /// <summary>
-        /// Get all items of work table from stored procedure
+        /// Get all items of user table from stored procedure
         /// </summary>
         /// <param name="repository"></param>
         /// <returns></returns>
-        public static async Task<IList<Work>> GetAll(this IRepository<Work> repository)
+        public static async Task<IList<MusLunarUser>> GetAll(this IRepository<MusLunarUser> repository)
         {
-            var works = new List<Work>();
+            var users = new List<MusLunarUser>();
             //SqlParameter demoPara = new SqlParameter();
 
             //demoPara.ParameterName = "@pId"; // Defining Name  
             //demoPara.Value = 1;
             //demoPara.SqlDbType = SqlDbType.Int; // Defining DataType  
             //demoPara.Direction = ParameterDirection.Input;
-            await repository.DbContext.LoadStoredProc("spGetWorks")
+            await repository.DbContext.LoadStoredProc("spGetusers")
                 //.WithSqlParam("@pId", demoPara)
                 //.WithSqlParam("id", "1") // Sample code to add params to provided stored procedure
                 .ExecuteStoredProcAsync(result =>
                 {
                     // Read value to list
-                    works = result.ReadNextListOrEmpty<Work>();
+                    users = result.ReadNextListOrEmpty<MusLunarUser>();
                     // Sample code to read to value
                     // var getOne = result.ReadToValue<int>() 
                 });
 
 
-            return works;
+            return users;
         }
     }
 }
