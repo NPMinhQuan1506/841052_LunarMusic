@@ -10,6 +10,7 @@
     [Avartar] NVARCHAR(MAX) NULL, 
     [Phone] NVARCHAR(50) NULL, 
     [Email] NVARCHAR(300) NULL, 
+    [Description] NVARCHAR(MAX) NULL, 
     [Note] NVARCHAR(MAX) NULL, 
     [Created] DATETIME NOT NULL, 
     [CreatedBy] INT NOT NULL, 

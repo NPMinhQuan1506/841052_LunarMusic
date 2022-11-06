@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[MusLunar_Music_Origin]
+﻿CREATE TABLE [dbo].[MusLunar_National]
 (
 	[ID] INT NOT NULL IDENTITY, 
     [Name] NVARCHAR(500) NOT NULL, 
@@ -8,5 +8,5 @@
     [Modified] DATETIME NOT NULL, 
     [ModifiedBy] INT NOT NULL, 
     [State] INT NULL DEFAULT 1, 
-    CONSTRAINT [PK_MusLunar_Music_Origin] PRIMARY KEY ([ID]) 
+    CONSTRAINT [PK_MusLunar_National] PRIMARY KEY ([ID]) 
 )

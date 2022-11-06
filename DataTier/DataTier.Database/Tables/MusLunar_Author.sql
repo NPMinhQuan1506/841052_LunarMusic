@@ -10,6 +10,7 @@
     [BirthDay] DATETIME NOT NULL, 
     [Phone] NVARCHAR(50) NULL, 
     [Email] NVARCHAR(300) NULL, 
+    [Description] NVARCHAR(MAX) NULL, 
     [Note] NVARCHAR(MAX) NULL, 
     [Created] DATETIME NULL, 
     [CreatedBy] INT NULL, 
