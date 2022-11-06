@@ -20,6 +20,7 @@ namespace ApplicationTier.Domain.Entities
         public DateTime BirthDay { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }
+        public string? Description { get; set; }
         public string? Note { get; set; }
         public DateTime? Created { get; set; }
         public int? CreatedBy { get; set; }

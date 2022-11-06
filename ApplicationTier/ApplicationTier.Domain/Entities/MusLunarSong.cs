@@ -21,8 +21,9 @@ namespace ApplicationTier.Domain.Entities
         public int AuthorId { get; set; }
         public int SingerId { get; set; }
         public int GroupId { get; set; }
-        public int OriginId { get; set; }
+        public int NationalId { get; set; }
         public int IsDisabled { get; set; }
+        public string? Lyrics { get; set; }
         public string? Note { get; set; }
         public DateTime Created { get; set; }
         public int CreatedBy { get; set; }

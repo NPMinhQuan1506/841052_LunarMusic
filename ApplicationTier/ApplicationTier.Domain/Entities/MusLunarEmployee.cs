@@ -30,7 +30,7 @@ namespace ApplicationTier.Domain.Entities
         public int? ModifiedBy { get; set; }
         public int State { get; set; }
 
-        public virtual MusLunarPararameter Gender { get; set; } = null!;
+        public virtual MusLunarParameter Gender { get; set; } = null!;
         public virtual ICollection<MusLunarUser> MusLunarUsers { get; set; }
     }
 }
