@@ -1,8 +1,12 @@
 ﻿using ApplicationTier.Domain.Entities;
 using ApplicationTier.Domain.Interfaces;
+using ApplicationTier.Domain.Entities;
+using ApplicationTier.Domain.Interfaces;
 using ApplicationTier.Infrastructure.Extensions;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +29,7 @@ namespace ApplicationTier.Infrastructure.Repositories
             //demoPara.Value = 1;
             //demoPara.SqlDbType = SqlDbType.Int; // Defining DataType  
             //demoPara.Direction = ParameterDirection.Input;
-            await repository.DbContext.LoadStoredProc("spGetemployees")
+            await repository.DbContext.LoadStoredProc("spGetEmployees")
                 //.WithSqlParam("@pId", demoPara)
                 //.WithSqlParam("id", "1") // Sample code to add params to provided stored procedure
                 .ExecuteStoredProcAsync(result =>

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationTier.Infrastructure
 {
-    public class UnitOfUser:IUnitOfUser
+    public class UnitOfUser: IUnitOfWork
     {
         public DbContext DbContext { get; private set; }
         private Dictionary<string, object> Repositories { get; }

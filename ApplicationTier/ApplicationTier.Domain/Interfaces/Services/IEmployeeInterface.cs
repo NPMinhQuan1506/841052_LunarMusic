@@ -9,6 +9,10 @@ namespace ApplicationTier.Domain.Interfaces.Services
 {
     public interface IEmployeeService
     {
+        /// <summary>
+        /// Interface of IEmployee is used to excute CRUD action
+        /// </summary>
+        /// <returns></returns>
         Task<IList<MusLunarEmployee>> GetAll();
         Task<MusLunarEmployee> GetOne(int employeeId);
         Task Update(MusLunarEmployee employee);

@@ -12,9 +12,9 @@ namespace ApplicationTier.Service
 {
     public class SongService: ISongService
     {
-        private readonly IUnitOfSong _unitOfSong;
+        private readonly IUnitOfWork _unitOfSong;
 
-        public SongService(IUnitOfSong unitOfSong)
+        public SongService(IUnitOfWork unitOfSong)
         {
             _unitOfSong = unitOfSong;
         }

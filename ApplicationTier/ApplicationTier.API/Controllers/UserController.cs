@@ -1,7 +1,5 @@
 ﻿using ApplicationTier.Domain.Entities;
 using ApplicationTier.Domain.Interfaces.Services;
-using ApplicationTier.Service;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApplicationTier.API.Controllers

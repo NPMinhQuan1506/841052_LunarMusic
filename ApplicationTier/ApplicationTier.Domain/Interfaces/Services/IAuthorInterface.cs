@@ -9,6 +9,10 @@ namespace ApplicationTier.Domain.Interfaces.Services
 {
     public interface IAuthorService
     {
+        /// <summary>
+        /// Interface of work is used to excute CRUD action
+        /// </summary>
+        /// <returns></returns>
         Task<IList<MusLunarAuthor>> GetAll();
         Task<MusLunarAuthor> GetOne(int authorId);
         Task Update(MusLunarAuthor author);

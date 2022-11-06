@@ -14,8 +14,8 @@ namespace ApplicationTier.Service
 
     public class EmployeeService: IEmployeeService
     {
-        private readonly IUnitOfEmployee _unitOfEmployee;
-        public EmployeeService(IUnitOfEmployee unitOfEmployee)
+        private readonly IUnitOfWork _unitOfEmployee;
+        public EmployeeService(IUnitOfWork unitOfEmployee)
         {
             _unitOfEmployee = unitOfEmployee;
         }
