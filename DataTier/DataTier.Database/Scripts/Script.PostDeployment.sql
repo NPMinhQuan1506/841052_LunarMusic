@@ -283,20 +283,12 @@ GO
 SET IDENTITY_INSERT [dbo].[MusLunar_User] OFF
 GO
 
-SET IDENTITY_INSERT [dbo].[MusLunar_UserApi] ON
-
-INSERT INTO [dbo].[MusLunar_UserApi]([ID],[Username],[Password],[EmployeeID],[LastSignin],[Note],[Created],[CreatedBy],[Modified],[ModifiedBy],[State])
-VALUES (1,'MuslunarAdmin','Ml123456',1,CAST(N'2022-11-06T00:00:00.000' AS DateTime),1,CAST(N'2023-01-01T00:00:00.000' AS DateTime), 1, CAST(N'2023-01-01T00:00:00.000' AS DateTime), 1, 1)
+USE [LunarMusic]
 GO
+SET IDENTITY_INSERT [dbo].[MusLunar_UserApi] ON 
 
-INSERT INTO [dbo].[MusLunar_UserApi]([ID],[Username],[Password],[EmployeeID],[LastSignin],[Note],[Created],[CreatedBy],[Modified],[ModifiedBy],[State])
-VALUES (2,'MuslunarTest','Test123456',4,CAST(N'2022-11-01T00:00:00.000' AS DateTime),1,CAST(N'2023-01-01T00:00:00.000' AS DateTime), 1, CAST(N'2023-01-01T00:00:00.000' AS DateTime), 1, 1)
-GO
-
-INSERT INTO [dbo].[MusLunar_UserApi]([ID],[Username],[Password],[EmployeeID],[LastSignin],[Note],[Created],[CreatedBy],[Modified],[ModifiedBy],[State])
-VALUES (3,'MuslunarLow','Test123456',6,CAST(N'2022-11-06T00:00:00.000' AS DateTime),1,CAST(N'2023-01-01T00:00:00.000' AS DateTime), 1, CAST(N'2023-01-01T00:00:00.000' AS DateTime), 1, 1)
-GO
-
+INSERT [dbo].[MusLunar_UserApi] ([ID], [Username], [Password], [EmailAddress], [Role], [SurName], [GivenName], [Created], [CreatedBy], [Modified], [ModifiedBy], [State]) VALUES (1, N'MusLunarAdmin', N'Ml123456', N'MusLunarAdmin@gmail.com', N'Administrator', N'Mus', N'Lunar', CAST(N'2022-11-10T00:00:00.000' AS DateTime), NULL, NULL, NULL, 1)
+INSERT [dbo].[MusLunar_UserApi] ([ID], [Username], [Password], [EmailAddress], [Role], [SurName], [GivenName], [Created], [CreatedBy], [Modified], [ModifiedBy], [State]) VALUES (2, N'MusLunarTest', N'Ml123456', N'MusLunarAdmin@gmail.com', N'Tester', N'Mus', N'Lunar', CAST(N'2022-11-10T00:00:00.000' AS DateTime), NULL, NULL, NULL, 1)
 SET IDENTITY_INSERT [dbo].[MusLunar_UserApi] OFF
 GO
 
