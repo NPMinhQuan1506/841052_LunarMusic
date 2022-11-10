@@ -81,6 +81,7 @@
     <Build Include="Tables\MusLunar_CustomerGroup.sql" />
     <Build Include="Tables\FKTable.sql" />
     <Build Include="Tables\MusLunar_National.sql" />
+    <Build Include="Tables\MusLunar_UserApi.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
