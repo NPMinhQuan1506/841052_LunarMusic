@@ -16,15 +16,15 @@ namespace ApplicationTier.Domain.Entities
         public int Id { get; set; }
         [DataMember]
         public string Name { get; set; } = null!;
-        public string NameNoSign { get; set; } = null!;
+        public string? NameNoSign { get; set; } = null!;
         public string? NickName { get; set; }
-        public string LastName { get; set; } = null!;
-        public int GenderId { get; set; }
-        public DateTime BirthDay { get; set; }
-        public string Phone { get; set; } = null!;
+        public string? LastName { get; set; } = null!;
+        public int? GenderId { get; set; }
+        public DateTime? BirthDay { get; set; }
+        public string? Phone { get; set; } = null!;
         public string? Email { get; set; }
         public string? AssistantEmail { get; set; }
-        public string Address { get; set; } = null!;
+        public string? Address { get; set; } = null!;
         public string? Avartar { get; set; }
         public string? BackgroundImage { get; set; }
         public string? Note { get; set; }

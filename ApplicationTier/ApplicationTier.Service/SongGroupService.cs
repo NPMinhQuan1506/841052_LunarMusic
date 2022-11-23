@@ -9,41 +9,38 @@ using System.Threading.Tasks;
 using ApplicationTier.Infrastructure.Repositories;
 namespace ApplicationTier.Service
 {
-    public class CustomerPlaylistService : ICustomerPlaylistService
+    public class SongGroupService : ISongGroupService
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CustomerPlaylistService(IUnitOfWork unitOfWork)
+        public SongGroupService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IList<MusLunarCustomerPlaylist>> GetAll()
+        public async Task<IList<MusLunarSongGroup>> GetAll()
         {
-            return await _unitOfWork.Repository<MusLunarCustomerPlaylist>().GetAllAsync();
-            //return await CustomerPlaylistRepository.GetAll(_unitOfWork.Repository<MusLunarCustomerPlaylist>());
+            return await _unitOfWork.Repository<MusLunarSongGroup>().GetAllAsync();
+            //return await SongGroupRepository.GetAll(_unitOfWork.Repository<MusLunarSongGroup>());
         }
 
-        public async Task<MusLunarCustomerPlaylist> GetOne(int Id)
+        public async Task<MusLunarSongGroup> GetOne(int Id)
         {
-            return await _unitOfWork.Repository<MusLunarCustomerPlaylist>().FindAsync(Id);
+            return await _unitOfWork.Repository<MusLunarSongGroup>().FindAsync(Id);
         }
 
-        public async Task Update(MusLunarCustomerPlaylist objInput)
+        public async Task Update(MusLunarSongGroup objInput)
         {
             try
             {
                 await _unitOfWork.BeginTransaction();
 
-                var repos = _unitOfWork.Repository<MusLunarCustomerPlaylist>();
+                var repos = _unitOfWork.Repository<MusLunarSongGroup>();
                 var obj = await repos.FindAsync(objInput.Id);
                 if (obj == null)
                     throw new KeyNotFoundException();
 
-                obj.ListeningTimes = objInput.ListeningTimes;
-                obj.CustomerId = objInput.CustomerId;
-                obj.SongId = objInput.SongId;
-                obj.ListeningTimes = objInput.ListeningTimes;
-                obj.LastListeningTime = objInput.LastListeningTime;
+                obj.Name = objInput.Name;
+                obj.Image = objInput.Image;
                 obj.Note = objInput.Note;
                 obj.Created = DateTime.UtcNow;
                 obj.CreatedBy = objInput.CreatedBy;
@@ -58,13 +55,13 @@ namespace ApplicationTier.Service
             }
         }
 
-        public async Task Add(MusLunarCustomerPlaylist objInput)
+        public async Task Add(MusLunarSongGroup objInput)
         {
             try
             {
                 await _unitOfWork.BeginTransaction();
 
-                var repos = _unitOfWork.Repository<MusLunarCustomerPlaylist>();
+                var repos = _unitOfWork.Repository<MusLunarSongGroup>();
                 await repos.InsertAsync(objInput);
 
                 await _unitOfWork.CommitTransaction();
@@ -82,7 +79,7 @@ namespace ApplicationTier.Service
             {
                 await _unitOfWork.BeginTransaction();
 
-                var repos = _unitOfWork.Repository<MusLunarCustomerPlaylist>();
+                var repos = _unitOfWork.Repository<MusLunarSongGroup>();
                 var obj = await repos.FindAsync(Id);
                 if (obj == null)
                     throw new KeyNotFoundException();
