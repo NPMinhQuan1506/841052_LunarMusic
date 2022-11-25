@@ -293,6 +293,72 @@ SET IDENTITY_INSERT [dbo].[MusLunar_UserApi] OFF
 GO
 
 
+USE [LunarMusic]
+GO
+/****** Object:  StoredProcedure [dbo].[YYY_sp_v1_CustomerPlaylist_LoadList]    Script Date: 11/25/2022 9:22:08 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[YYY_sp_v1_rp_favouritemusic_general]
+	@datefrom datetime = '2019-11-25',
+	@dateto datetime = '2022-11-25'
+AS
+BEGIN
+	SELECT ID=S.GenresID
+		, Genres=ISNULL(G.Name, '')
+		, FavNum = COUNT(P.SongID)
+		, ListenTimes = SUM(P.ListeningTimes)
+	FROM MusLunar_CustomerPlaylist P
+	INNER JOIN MusLunar_Song S ON S.ID = P.SongID AND S.State=1
+	INNER JOIN MusLunar_Music_Genres G ON G.ID = S.GenresID
+	WHERE P.Created BETWEEN @datefrom AND @dateto AND P.State=1
+	GROUP BY S.GenresID, G.Name
+
+END
+
+/****** Object:  StoredProcedure [dbo].[YYY_sp_v1_CustomerPlaylist_LoadList]    Script Date: 11/25/2022 9:22:08 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[YYY_sp_v1_rp_favouritemusic_detail]
+	@datefrom datetime = '2019-11-25',
+	@dateto datetime = '2022-11-25',
+	@genresID int = 2
+AS
+BEGIN
+	SELECT PL.ID
+		  ,Genres = ISNULL(G.Name, '')
+		  ,CustID = ISNULL(C.ID, 0)
+		  ,CustName = ISNULL(C.Name, '')
+		  ,SongName = ISNULL(S.Name, '')
+		  ,PL.ListeningTimes
+		  ,PL.LastListeningTime
+		  ,PL.Created
+		  ,PL.CreatedBy
+		  ,PL.Modified
+		  ,PL.ModifiedBy
+	FROM MusLunar_CustomerPlaylist PL
+	INNER JOIN MusLunar_Customer C ON C.ID = PL.CustomerID AND PL.State = 1
+	INNER JOIN MusLunar_Song S ON S.ID = PL.SongID AND S.State = 1
+	INNER JOIN MusLunar_Music_Genres G ON G.ID = S.GenresID
+	WHERE PL.Created BETWEEN @datefrom AND @dateto AND PL.State=1
+	 AND (S.GenresID = 0 OR S.GenresID = @genresID)
+END
+
+
+
 
 
 

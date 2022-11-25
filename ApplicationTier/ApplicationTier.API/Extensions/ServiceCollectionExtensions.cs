@@ -42,7 +42,13 @@ namespace ApplicationTier.API.Extensions
         {
             return services.AddScoped<IWorkService, WorkService>()
                            .AddScoped<ICustomerPlaylistService, CustomerPlaylistService>()
-                           .AddScoped<IParameterService, ParameterService>();
+                           .AddScoped<IParameterService, ParameterService>()
+                           .AddScoped<ICustomerService, CustomerService>()
+                           .AddScoped<ICustomerGroupService, CustomerGroupService>()
+                           .AddScoped<ICustomerUserService, CustomerUserService>()
+                           .AddScoped<ISongGroupService, SongGroupService>()
+                           .AddScoped<ISPFavouriteMusicGenService, spFavouriteMusicGenService>()
+                           .AddScoped<ISPFavouriteMusicDetailService, spFavouriteMusicDetailService>();
         }
 
         /// <summary>

@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApplicationTier.API.Controllers
 {
-    public class SongGroupController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SongGroupController : ControllerBase
     {
 
         private readonly ISongGroupService _service;

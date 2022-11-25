@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApplicationTier.API.Controllers
 {
-    public class CustomerUserController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CustomerUserController : ControllerBase
     {
         private readonly ICustomerUserService _service;
         public CustomerUserController(ICustomerUserService service)

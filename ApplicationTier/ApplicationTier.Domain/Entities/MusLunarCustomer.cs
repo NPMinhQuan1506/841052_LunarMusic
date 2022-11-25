@@ -32,7 +32,7 @@ namespace ApplicationTier.Domain.Entities
         public int? CreatedBy { get; set; }
         public DateTime? Modified { get; set; }
         public int? ModifiedBy { get; set; }
-        public int State { get; set; }
+        public int? State { get; set; }
 
         //public virtual ICollection<MusLunarCustomerPlaylist> MusLunarCustomerPlaylists { get; set; }
         //public virtual ICollection<MusLunarCustomerUser> MusLunarCustomerUsers { get; set; }
