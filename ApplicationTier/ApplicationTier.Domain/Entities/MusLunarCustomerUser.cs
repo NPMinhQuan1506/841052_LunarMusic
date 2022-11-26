@@ -15,7 +15,7 @@ namespace ApplicationTier.Domain.Entities
         public DateTime? BlockTime { get; set; }
         public string? Note { get; set; }
         public DateTime? Created { get; set; }
-        public int CreatedBy { get; set; }
+        public int? CreatedBy { get; set; }
         public DateTime? Modified { get; set; }
         public int? ModifiedBy { get; set; }
         public int? State { get; set; }

@@ -11,6 +11,7 @@ namespace ApplicationTier.Domain.Interfaces.Services
     {
         Task<IList<MusLunarCustomerUser>> GetAll();
         Task<MusLunarCustomerUser> GetOne(int Id);
+        Task<MusLunarCustomerUser> GetOneByUsername(string Username);
         Task Update(MusLunarCustomerUser objInput);
         Task Add(MusLunarCustomerUser objInput);
         Task Delete(int Id);

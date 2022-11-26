@@ -9,53 +9,49 @@ using System.Threading.Tasks;
 using ApplicationTier.Infrastructure.Repositories;
 namespace ApplicationTier.Service
 {
-    public class CustomerUserService : ICustomerUserService
+    public class SingerService : ISingerService
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CustomerUserService(IUnitOfWork unitOfWork)
+        public SingerService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IList<MusLunarCustomerUser>> GetAll()
+        public async Task<IList<MusLunarSinger>> GetAll()
         {
-            return await _unitOfWork.Repository<MusLunarCustomerUser>().GetAllAsync();
-
+            return await _unitOfWork.Repository<MusLunarSinger>().GetAllAsync();
+            //return await SingerRepository.GetAll(_unitOfWork.Repository<MusLunarSinger>());
         }
 
-        public async Task<MusLunarCustomerUser> GetOne(int Id)
+        public async Task<MusLunarSinger> GetOne(int Id)
         {
-            return await _unitOfWork.Repository<MusLunarCustomerUser>().FindAsync(Id);
+            return await _unitOfWork.Repository<MusLunarSinger>().FindAsync(Id);
         }
 
-        public async Task<MusLunarCustomerUser> GetOneByUsername(string Username)
-        {
-            return await CustomerUserRepository.GetOneByUsername(_unitOfWork.Repository<MusLunarCustomerUser>(), Username);
-        }
-
-        public async Task Update(MusLunarCustomerUser objInput)
+        public async Task Update(MusLunarSinger objInput)
         {
             try
             {
                 await _unitOfWork.BeginTransaction();
 
-                var repos = _unitOfWork.Repository<MusLunarCustomerUser>();
+                var repos = _unitOfWork.Repository<MusLunarSinger>();
                 var obj = await repos.FindAsync(objInput.Id);
                 if (obj == null)
                     throw new KeyNotFoundException();
-                if (objInput.Password != null)
-                    obj.Password = objInput.Password;                
-                if (objInput.LastSignin != null)
-                    obj.LastSignin = objInput.LastSignin;
-                if (objInput.IsBlock != null)
-                    obj.IsBlock = objInput.IsBlock;
-                if (objInput.BlockTime != null)
-                    obj.BlockTime = objInput.BlockTime;
-                if (objInput.BlockTime != null)
-                    obj.Note = objInput.Note;
-                obj.Modified = DateTime.UtcNow;
 
-                obj.CreatedBy = objInput.CreatedBy ?? 1;
+                obj.Name = objInput.Name;
+                obj.NameNoSign = objInput.NameNoSign;
+                obj.NickName = objInput.NickName;
+                obj.LastName = objInput.LastName;
+                obj.GenderId = objInput.GenderId;
+                obj.BirthDay = objInput.BirthDay;
+                obj.Avartar = objInput.Avartar;
+                obj.Phone = objInput.Phone;
+                obj.Email = objInput.Email;
+                obj.Description = objInput.Description;
+                obj.Note = objInput.Note;
+                obj.Created = DateTime.UtcNow;
+                obj.CreatedBy = objInput.CreatedBy;
                 obj.State = 1;
 
                 await _unitOfWork.CommitTransaction();
@@ -67,13 +63,13 @@ namespace ApplicationTier.Service
             }
         }
 
-        public async Task Add(MusLunarCustomerUser objInput)
+        public async Task Add(MusLunarSinger objInput)
         {
             try
             {
                 await _unitOfWork.BeginTransaction();
 
-                var repos = _unitOfWork.Repository<MusLunarCustomerUser>();
+                var repos = _unitOfWork.Repository<MusLunarSinger>();
                 await repos.InsertAsync(objInput);
 
                 await _unitOfWork.CommitTransaction();
@@ -91,7 +87,7 @@ namespace ApplicationTier.Service
             {
                 await _unitOfWork.BeginTransaction();
 
-                var repos = _unitOfWork.Repository<MusLunarCustomerUser>();
+                var repos = _unitOfWork.Repository<MusLunarSinger>();
                 var obj = await repos.FindAsync(Id);
                 if (obj == null)
                     throw new KeyNotFoundException();
