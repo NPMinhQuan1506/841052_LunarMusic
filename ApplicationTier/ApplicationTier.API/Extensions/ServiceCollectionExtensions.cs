@@ -46,6 +46,10 @@ namespace ApplicationTier.API.Extensions
                            .AddScoped<ICustomerService, CustomerService>()
                            .AddScoped<ICustomerGroupService, CustomerGroupService>()
                            .AddScoped<ICustomerUserService, CustomerUserService>()
+                           .AddScoped<ISongService, SongService>()
+                           .AddScoped<IUserService, UserService>()
+                           .AddScoped<IAuthorService, AuthorService>()
+                           .AddScoped<IEmployeeService, EmployeeService>()
                            .AddScoped<ISongGroupService, SongGroupService>()
                            .AddScoped<ISPFavouriteMusicGenService, spFavouriteMusicGenService>()
                            .AddScoped<ISPFavouriteMusicDetailService, spFavouriteMusicDetailService>();
