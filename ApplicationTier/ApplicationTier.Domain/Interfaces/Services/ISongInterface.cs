@@ -9,7 +9,7 @@ namespace ApplicationTier.Domain.Interfaces.Services
 {
     public interface ISongService
     {
-        Task<IList<MusLunarSong>> GetAll();
+        Task<IList<spMusLunarSong>> GetAll();
         Task<MusLunarSong> GetOne(int Id);
         Task Update(MusLunarSong objInput);
         Task Add(MusLunarSong objInput);

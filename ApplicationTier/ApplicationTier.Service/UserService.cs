@@ -40,12 +40,9 @@ namespace ApplicationTier.Service
                     throw new KeyNotFoundException();
 
                 obj.Password = objInput.Password;
-                obj.EmployeeId = objInput.EmployeeId;
-                obj.LastSignin = objInput.LastSignin;
-                if(obj.Note != null)
-                {
-                    obj.Note = objInput.Note;
-                }
+                obj.Name = objInput.Name != "" ? objInput.Name : obj.Name;
+                obj.Email = objInput.Email != "" ? objInput.Email : obj.Email;
+                obj.Password = objInput.Password != "" ? objInput.Password : obj.Password;
                 obj.Created = DateTime.UtcNow;
                 obj.CreatedBy = objInput.CreatedBy;
                 obj.State = 1;

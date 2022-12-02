@@ -41,7 +41,7 @@ namespace ApplicationTier.Service
 
                 obj.Name = objInput.Name;
                 obj.Image = objInput.Image;
-                obj.Note = objInput.Note;
+                obj.SingerId = objInput.SingerId;
                 obj.Created = DateTime.UtcNow;
                 obj.CreatedBy = objInput.CreatedBy;
                 obj.State = 1;

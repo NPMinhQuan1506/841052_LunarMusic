@@ -1,0 +1,159 @@
+﻿@{
+    ViewData["Title"] = "About Page";
+}
+
+<section class="pager-section">
+    <div class="fixed-bg bg4"></div>
+    <div class="container">
+        <div class="pager-content text-center">
+            <h2>About Us</h2>
+        </div><!--pager-content end-->
+    </div>
+</section><!--pager-section end-->
+
+<section class="about-page-content block">
+    <div class="container">
+        <div class="about-page-head wow slideInUp" style="visibility: visible; animation-name: slideInUp;">
+            <h2 class="sm-title">Artist Bio</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ms-abt-col">
+                        <h4>Have a music event in mind? You can reach us by e-mail!</h4>
+                        <a href="#" title="" class="email-link">Send e-mail</a>
+                    </div><!--ms-abt-col end-->
+                </div>
+                <div class="col-lg-8">
+                    <div class="abt-para">
+                        <p>Based in HCM. We push boundaries trough thinking not just about your brand, your website, or your digital marketing but how all of the digital elements of your business work togheter. Through our best-in-class techniques and bespoke growth plans we assess digital problems and put in place strategies that lead to commercial success. We are a reliable and affordable digital agency and talent network. We channel creativity, colors, copy and code to help our clients with better branding. We believe that great design </p>
+                    </div>
+                </div>
+            </div>
+        </div><!--about-page-head end-->
+        <div class="about-lg-content">
+            <div class="abt-lg-image">
+                <img src="/img/image1.jpg" alt="">
+            </div><!--abt-lg-image end-->
+            <h2>During the last  years, I've  been working on different music producers, musicians and music labels. </h2>
+            <ul class="tg-links wow slideInUp" style="visibility: hidden; animation-name: none;" id="AB_SingerList">
+            </ul>
+        </div><!--about-lg-content end-->
+    </div>
+</section><!--about-page-content end-->
+<section class="contact-section">
+    <div class="fixed-bg bg3"></div>
+    <div class="ct-content">
+        <div class="contact-content">
+            <div class="ct-head">
+                <h2>Contact Us</h2>
+                <span>Or come and drink coffee in comfy place</span>
+            </div><!--ct-head end-->
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="wd-content">
+                        <h3>Booking </h3>
+                        <ul>
+                            <li>Quan Nguyen</li>
+                            <li><a href="mailto:example@example.com" title="">mus@music.com</a></li>
+                        </ul>
+                    </div><!--wd-content end-->
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="wd-content">
+                        <h3>Management  </h3>
+                        <ul>
+                            <li>Lunar</li>
+                            <li><a href="mailto:example@example.com" title="">lunar@music.com</a></li>
+                        </ul>
+                    </div><!--wd-content end-->
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="wd-content">
+                        <h3>Press Agency  </h3>
+                        <ul>
+                            <li>MusLunar</li>
+                            <li><a href="mailto:example@example.com" title="">MusLunar@music.com</a></li>
+                        </ul>
+                    </div><!--wd-content end-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <div class="dp-text">
+                        <h3>Drop us a line or two, we are open for creative minds and music featurings!</h3>
+                        <span>Get in Touch</span>
+                        <a href="#" title="" class="mail-link">info@music.com</a>
+                    </div><!--dp-text end-->
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="wd-content">
+                        <h3>Our Music Studio  </h3>
+                        <ul>
+                            <li>338 Chien Luoc, Binh Tan District, HCM City</li>
+                        </ul>
+                    </div><!--wd-content end-->
+                </div>
+            </div>
+            <ul class="lg-social wow slideInLeft" data-wow-duration="1000ms" style="visibility: hidden; animation-duration: 1000ms; animation-name: none;">
+                <li><a href="#" title="" class="spotify-ic"><img src="~/img/spotify.png" alt=""></a></li>
+                <li><a href="#" title="" class="music"><img src="~/img/music.png" alt=""></a></li>
+                <li><a href="#" title="" class="youtube"><img src="~/img/play.png" alt=""></a></li>
+                <li><a href="#" title="" class="soundcloud"><img src="~/img/soundcloud.png" alt=""></a></li>
+            </ul><!--lg-social end-->
+        </div><!--contact-content end-->
+    </div><!--ct-content end-->
+</section><!--contact-section end-->
+
+<section class="block">
+    <div class="fixed-bg black-bg"></div>
+    <div class="container">
+        <div class="subscribe-section text-center wow slideInUp" data-wow-duration="1000ms" style="visibility: hidden; animation-duration: 1000ms; animation-name: none;">
+            <h2>Stay in Touch</h2>
+            <span>Subscribe to our newsletter and stay updated on the latest music albums, live shows and music releases.</span>
+            <form class="subs-form">
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="Enter your email address">
+                    <span class="em-icon"><i class="fa fa-envelope"></i></span>
+                </div>
+                <button type="submit" class="theme-btn"><i class="fa fa-paper-plane"></i>Subscribe</button>
+            </form>
+        </div><!--subscribe-section end-->
+    </div>
+</section>
+<script>
+    let About_DataMusic = [];
+    $(document).ready(function () {
+        setTimeout(function () { $('.preloader').hide(500); }, 500);
+
+        About_LoadData();
+    })
+
+    function About_LoadData() {
+        new Promise((resolve, reject) => {
+            $.ajax({
+                url: "api/Singer/getAll",
+                type: "POST",
+                data: {},
+                contentType: 'application/json; charset=utf-8',
+                async: true,
+                success: function (result) {
+                    if (result != "0") {
+                        let data = [...result];
+                        if (data && data.length > 0) {
+                            $("#AB_SingerList").html('');
+                            let result = '';
+                            for (let i = 0; i < 10 && i < data.length; i++) {
+                                let item = data[i];
+                                result += `<li>${item.name} </li>`;
+                            }
+                            $("#AB_SingerList").html(result);
+                        }
+                    }
+                }
+                , beforeSend: function (xhr) {
+                },
+            });
+            resolve();
+        });
+    }
+
+</script>

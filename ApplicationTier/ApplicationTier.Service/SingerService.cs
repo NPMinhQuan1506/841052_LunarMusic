@@ -38,16 +38,8 @@ namespace ApplicationTier.Service
                 var obj = await repos.FindAsync(objInput.Id);
                 if (obj == null)
                     throw new KeyNotFoundException();
-
                 obj.Name = objInput.Name;
-                obj.NameNoSign = objInput.NameNoSign;
-                obj.NickName = objInput.NickName;
-                obj.LastName = objInput.LastName;
-                obj.GenderId = objInput.GenderId;
-                obj.BirthDay = objInput.BirthDay;
                 obj.Avartar = objInput.Avartar;
-                obj.Phone = objInput.Phone;
-                obj.Email = objInput.Email;
                 obj.Description = objInput.Description;
                 obj.Note = objInput.Note;
                 obj.Created = DateTime.UtcNow;

@@ -64,24 +64,12 @@
     <Folder Include="Snapshots" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\MusLunar_Pararameter_Type.sql" />
-    <Build Include="Tables\MusLunar_Pararameter.sql" />
     <Build Include="Tables\MusLunar_Singer.sql" />
     <Build Include="Tables\MusLunar_Music_Genres.sql" />
-    <Build Include="Tables\MusLunar_Author.sql" />
     <Build Include="Tables\MusLunar_SongGroup.sql" />
     <Build Include="Tables\MusLunar_Song.sql" />
-    <Build Include="Tables\MusLunar_Employee.sql" />
-    <Build Include="Tables\MusLunar_CustomerPlaylist.sql" />
-    <Build Include="Tables\MusLunar_Order.sql" />
-    <Build Include="Tables\MusLunar_OrderDetail.sql" />
     <Build Include="Tables\MusLunar_User.sql" />
-    <Build Include="Tables\MusLunar_CustomerUser.sql" />
-    <Build Include="Tables\MusLunar_Customer.sql" />
-    <Build Include="Tables\MusLunar_CustomerGroup.sql" />
     <Build Include="Tables\FKTable.sql" />
-    <Build Include="Tables\MusLunar_National.sql" />
-    <Build Include="Tables\MusLunar_UserApi.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

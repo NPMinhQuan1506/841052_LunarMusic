@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta charset="UTF-8">
+    <title>MusLunar - Music @ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="~/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="~/css/jplayer.blue.monday.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/swipebox.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="~/css/revolution.all.css">
+    <link rel="stylesheet" href="~/css/revolution3.css">
+    <!-- Modernizr -->
+    <script src="~/js/modernizr.js"></script>
+
+
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-migrate-1.4.1.min.js"></script>
+
+    <!-- Vendor -->
+    <script src="~/js/vendor.js"></script>
+
+    <!-- Revolution Slider -->
+    <script src="~/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script src="~/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <script src="~/js/revolution.extensions.all.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="~/js/main.js"></script>
+
+    <script src="~/js/jquery.jplayer.min.js"></script>
+    <script src="~/js/jplayer.playlist.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/jquery.swipebox.min.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/playlist.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/js/AjaxLoad.js"></script>
+    <script src="https://js.upload.io/upload-js/v2"></script>
+</head>
+
+
+<body>
+
+    <div class="preloader">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <div class="wrapper">
+
+        <header>
+            <div class="container-fluid">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="/" title="" class="white-logo">
+                            <img src="~/img/logo.png" alt="">
+                            <h1 class="d-inline-block text-white font-weight-bold pt-1 mt-1" style="font-size:25px">LUNAR MUSIC</h1>
+                        </a>
+                        <a href="/" title="" class="dark-logo">
+                            <img src="~/img/logo-black.png" alt="">
+                            <h1 class="d-inline-block text-black font-weight-bold pt-1 mt-1" style="font-size:25px">LUNAR MUSIC</h1>
+                        </a>
+                    </div><!--logo end-->
+                    <nav>
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="/" title="">HOME</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">GENRES</a>
+                                <ul id="LO_HeaderGenresH">
+                                </ul>
+                            </li>
+                            <li><a href="/About" title="">ABOUT</a></li>
+                            <li>
+
+                                @*                              <div class="input-group mb-3" id="LO_SearchDivH">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                                <input id="LO_ipSearchH" type="text" class="form-control" placeholder="eg .search song name" aria-label="search" aria-describedby="basic-addon1">
+                                </div>*@
+                            </li>
+                        </ul>
+                    </nav><!--navigation end-->
+                    <ul class="social-links hd-v">
+                        <li><a href="/Login" title=""><i class="fas fa-user"></i> Login/ Register</a></li>
+                        <li><a id="LO_SearchH" title=""><i class="fa fa-search"></i></li>
+
+                    </ul>
+
+                    <!--social-links end-->
+                    <div class="menu-btn">
+                        <span class="bar1"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
+                    </div>
+                </div><!--header-content end-->
+            </div>
+        </header><!--header end-->
+
+        <div class="responsive-mobile-menu">
+            <ul>
+                <li>
+                    <div class="input-group mb-3" id="LO_SearchDivM">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                        <input id="LO_ipSearchM" type="text" class="form-control" placeholder="eg .search song name" aria-label="search" aria-describedby="basic-addon1">
+                    </div>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="/" title="">HOME</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" title="">GENRES</a>
+                    <ul id="LO_HeaderGenresM">
+                    </ul>
+                </li>
+                <li><a href="about.html" title="">ABOUT</a></li>
+            </ul>
+        </div><!--responsive-menu end-->
+
+        <div class="" style="min-height: 85vh !important">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row footer-content">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="copyright">
+                            <p>© By MusLunar @DateTime.Now.Year</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="ft-logo text-center">
+                            <img src="~/img/ft-logo.png" alt="">
+                        </div><!--ft-logo end-->
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <ul class="social-links v2">
+                            <li><a href="#" title=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" title=""><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
+                        </ul><!--social-links end-->
+                    </div>
+                </div>
+            </div>
+        </footer><!--footer end-->
+
+    </div><!--wrapper end-->
+
+    <script>
+        var LO_DataGenres = [];
+        $(document).ready(function () {
+            Layout_LoadGenres();
+        })
+        async function Layout_LoadGenres() {
+            new Promise((resolve, reject) => {
+                $.ajax({
+                    url: "api/Genres/getAll",
+                    type: "POST",
+                    data: {},
+                    contentType: 'application/json; charset=utf-8',
+                    async: true,
+                    success: function (result) {
+                        if (result != "0") {
+                            LO_DataGenres = result.reduce((pre, arr) => { if (arr.id) pre[arr.id] = arr; return pre; }, {});
+                            let data = result
+                            if (data && data.length != 0) {
+                                Layout_RenderGenres(data, 'LO_HeaderGenresH');
+                                Layout_RenderGenres(data, 'LO_HeaderGenresM');
+                            }
+                        }
+                    }
+                    , beforeSend: function (xhr) {
+                        //xhr.setRequestHeader("Authorization", "Bearer " + localStorage.getItem("WebToken"));
+                        //if (before != undefined && before != null && before.length != 0) before();
+                    },
+                });
+                //AjaxLoad(url = "api/General/getGenres"
+                //    , data = {}
+                //    , async = true
+                //    , error = function (e) {
+                //    }
+                //    , success = function (result) {
+                //        debugger
+                //        if (result != "0") {
+                //            let data = JSON.parse(result);
+                //            if (data && data.length != 0) {
+                //                Layout_RenderGenres(data, 'LO_HeaderGenresH');
+                //                Layout_RenderGenres(data, 'LO_HeaderGenres');
+                //            }
+                //        }
+                //    },
+                //    sender = null,
+                //    before = function (e) {
+
+                //    },
+                //    complete = function (e) {
+
+                //    }
+                //);
+                resolve();
+            });
+
+        }
+
+        function Layout_RenderGenres(data, id) {
+            var myNode = document.getElementById(id);
+            if (myNode != null) {
+                myNode.innerHTML = '';
+                let stringContent = '';
+                if (data && data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        let item = data[i];
+                        let tr = `<li><a href="/Genres/${item.id}" title="">${item.name}</a></li> `;
+
+                        stringContent += tr;
+                    }
+                }
+                document.getElementById(id).innerHTML = stringContent;
+            }
+        }
+        function decodeHtml(html) {
+            var txt = document.createElement("textarea");
+            txt.innerHTML = html;
+            return txt.value;
+        }
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <style>
+
+        body::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+
+        body::-webkit-scrollbar {
+            width: 12px;
+            background-color: #F5F5F5;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #555;
+        }
+
+    </style>
+</body>
+
+</html>

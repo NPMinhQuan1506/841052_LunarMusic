@@ -1,0 +1,188 @@
+
+
+@media (max-width: 1366px) {
+	.about-text {padding: 0 50px;}
+	.ct-content {max-width: 1000px;}
+	header .container-fluid {padding: 0 15px;}
+}
+
+@media (max-width: 1200px) {
+	header nav {display: none;}
+	.social-links.hd-v {display: none;}
+	.shows-row .theme-btn {padding: 0 23px;}
+	.block2 {padding: 120px 0;}
+	.ct-content {max-width: 850px;}
+	.contact-section {padding-top: 140px;}
+	.banner-content {margin-top: 0;}
+	.menu-btn {display: inline-block;}
+	.logo {padding-bottom: 0;}
+	.album-img {max-width: 350px;flex: 0 0 350px;}
+	.title-bar {max-width: 430px;flex: 0 0 430px;}
+	.ms-player .jp-controls {margin-right: 20px;}
+	.pager-section {padding: 190px 0 120px;}
+	.pager-content h2 {font-size: 60px;line-height: 1.4;}
+	.single-album-text > h2 {font-size: 38px;line-height: 50px;}
+	.shows-row .theme-btn {font-size: 15px;}
+	header.sticky {padding: 20px 0;}
+	.tp-bullets, .tp-tabs, .tp-thumbs {display: none !important;}
+	.testimonial-slider-lg .slick-next, .testimonial-slider-lg .slick-prev {right: 15px;}
+	.testi-lg-info {right: 15px;}
+	.landing-banner {background-position: center;}
+	.landing-banner .container-fluid {padding: 0 15px;}
+}
+
+@media (max-width: 991px) {
+	.banner-text > h1 {font-size: 80px;line-height: 80px;}
+	.shows-head {margin-bottom: 30px;justify-content: center;}
+	.shows-row {text-align: center;}
+	.shows-row .theme-btn {padding: 0 40px;margin-top: 30px;}
+	.show-info {max-width: 100%;flex: 0 0 100%;margin-top: 30px;padding-left: 0;}
+	.show-time li {display: inline-block;margin-right: 30px;}
+	.show-time li:last-child {margin-right: 0;}
+	.sw-icon {display: inline-block;}
+	.about-text {max-width: 100%;padding: 0 15px;margin-bottom: 70px;}
+	.contact-content {padding: 80px 50px;}
+	.contact-section {padding: 120px 0 0;}
+	.album-img {flex: 0 0 300px;max-width: 300px;}
+	.album-info {max-width: calc(100% - 300px); flex: 0 0 calc(100% - 300px);}
+	.jp-controls button {margin: 0 15px;}
+	.ms-album {max-width: 100%;flex: 0 0 100%;justify-content: center;margin-bottom: 30px;}
+	.ms-player {max-width: 100%;flex: 0 0 100%;}
+	.lg-social {display: none;}
+	.ms-abt-col > h4 {margin-bottom: 50px;}
+	.abt-para {padding-left: 0;margin-top: 60px;}
+	.about-page-head {margin-bottom: 60px;}
+	.about-lg-content > h2 {font-size: 36px;line-height: 50px;padding-right: 0;}
+	.abt-lg-image {margin-bottom: 60px;}
+	.about-lg-content > h2 {margin-bottom: 50px;}
+	.contact-section {padding-top: 0;}
+	.section-title {margin-bottom: 50px;}
+	.shows-row .theme-btn {width: auto;font-size: 18px;}
+	.ct-content {border-top: 1px solid #ddd;}
+	br {display: none;}
+	.jp-controls button {margin: 0 10px;}
+	.music-player {position: static;background-color: #000;}
+	.album-section.block {padding-top: 300px;}
+	.tp-bullets, .tp-tabs, .tp-thumbs {display: inline-block !important;}
+	.inp-block {margin-top: 150px;}
+	.coming-soon-page .music-player {display: none;}
+	.cm-page-content {position: relative;top: 0;left: 0;transform: inherit;}
+	.coming-soon-page {overflow-y: auto;}
+	.testimonial-slider-section{margin-bottom: -50px;}
+	#slider + .block.album-page {margin-top: 130px; }
+	#slider + .txt-block {margin-top: 160px;}
+	.music-player {position: relative;z-index: 999;}
+	.testi-lg-info {position: static;width: 100%;max-width: 100%;}
+	.testimonial-slider-lg .slick-next, .testimonial-slider-lg .slick-prev {right: 0;}
+	.testimonial-slider-lg .slick-prev {right: 0;}
+	.testi-thumbs {margin-top: 40px;}
+	.sec-v-title.v2 {text-align: center;margin-bottom: 50px;}
+	.sec-v-title.v2:before {left: 50%;transform: translateX(-50%);}
+	.sp-img {text-align: center;}
+	.landing-page .block {padding: 100px 0;}
+}
+
+@media (max-width: 768px) {
+	.banner-text > h1 {font-size: 70px;line-height: 70px;}
+	.section-title {margin-bottom: 80px;}
+	.dp-text {margin-bottom: 50px;}
+	.footer-content {text-align: center;}
+	.copyright {margin-bottom: 40px;}
+	.ft-logo {margin-bottom: 40px;}
+	.social-links.v2 {text-align: center;}
+	footer {padding: 40px 0;}
+	.contact-content {padding: 80px 50px 20px;}
+	.alb-title {text-align: center;margin-bottom: 40px;}
+	.album-dt {text-align: center;}
+	.album-img {max-width: 100%;flex: 0 0 100%;margin-bottom: 50px;}
+	.album-info {max-width: 100%;flex: 0 0 100%;padding: 0;}
+	.music-details {display: none;}
+	.jp-interface .jp-controls {justify-content: flex-start;}
+	.jp-controls button.jp-previous {margin-left: 0;}
+	.ms-player .jp-controls {max-width: 100%;flex: 0 0 100%;justify-content: center;margin-bottom: 30px;}
+	.title-bar {max-width: 86%;flex: 0 0 86%;}
+	.pager-content h2 {font-size: 50px;}
+	.pager-section {padding: 150px 0 90px;}
+	.single-album-text > h2 {font-size: 30px;line-height: 40px;}
+	.section-title > h2 {font-size: 34px;line-height: 44px;}
+	.section-title {margin-bottom: 50px;}
+	.has-5-columns .col-lg-2 {max-width: 50%;flex: 0 0 50%;}
+	.album-section.block {padding-top: 300px;margin-top: 120px;}
+	.inp-block {margin-top: 300px;}
+	.musize-dt {max-width: 100%;flex: 0 0 100%;padding: 30px 20px;}
+	.musiz-playz-row {justify-content: center;}
+	.cm-page-content > h2 {margin-bottom: 60px;}
+	#slider + .block.album-page {margin-top: 280px;}
+	#slider + .txt-block {margin-top: 300px;}
+	.landing-banner {padding: 30px 0 100px;}
+	.ld-text > h2 {font-size: 60px;line-height: 70px;}
+	.sec-v-title h2 {font-size: 32px;line-height: 40px;}
+	.landing-footer {padding: 50px 0;}
+}
+
+@media (max-width: 576px) {
+	.banner-text p {font-size: 20px;line-height: 30px;}
+	.jp-interface .jp-controls {justify-content: center;margin-bottom: 30px;}
+	.oth-controls {display: flex;flex-wrap: wrap;align-items: center;}
+	.jp-time-holder {margin-right: auto;margin-left: 0;}
+	.title-bar {max-width: 100%;flex: 0 0 100%;}
+	.ms-player .jp-volume-controls {margin-left: auto;margin-right: auto;margin-top: 20px;}
+	.sm-title {font-size: 36px;}
+	.single-album-text > h2 {font-size: 26px;line-height: 38px;}
+	.pager-content h2 {font-size: 40px;}
+	.section-title > h2 {font-size: 34px;line-height: 44px;}
+	.has-5-columns .col-lg-2 {max-width: 100%;flex: 0 0 100%;}
+	.block {padding: 90px 0;}
+	.rev_slider_wrapper {height: 100vh !important;}
+	.tp-bullets {bottom: 50px;top: auto;z-index: 999999999999999;}
+	.alb-head {margin-top: 40px;}
+	.inp-block {margin-top: 400px;}
+	.cm-page-content > h2 {font-size: 60px;line-height: 60px;}
+	#slider + .block.album-page {margin-top: 380px;}
+	#slider + .txt-block {margin-top: 400px;}
+	.testi-lg-info {padding: 50px 15px;}
+	.ld-logo {margin-bottom: 80px;}
+	.ld-ft > img {max-width: 200px;margin-bottom: 30px;}
+}
+
+@media (max-width: 480px) {
+	.banner-text > h1 {font-size: 54px;line-height: 60px;}
+	.section-title > h2 {font-size: 36px;line-height: 42px;margin-bottom: 30px;}
+	.play-btn {width: 100px;height: 100px;line-height: 100px;}
+	.music-video > h3 {font-size: 24px;}
+	.ct-head {margin-bottom: 50px;}
+	.wd-content {margin-bottom: 50px;}
+	.contact-content {padding: 80px 15px 40px;}
+	.input-field {margin-bottom: 30px;}
+	.alb-title > h2 {font-size: 32px;line-height: 42px;}
+	.in-head > h2 {font-size: 24px;line-height: 34px;}
+	.bt-btns li {display: block;margin-right: 0;margin-bottom: 20px;}
+	.bt-btns li:last-child {margin-bottom: 0;}
+	.ms-top > h4 {max-width: 200px;}
+	.sm-title {font-size: 28px;line-height: 38px;}
+	.single-album-text > h2 {font-size: 22px;line-height: 34px;}
+	.single-album-text p {font-size: 16px;line-height: 32px;}
+	.pager-content h2 {font-size: 30px;line-height: 40px;}
+	.pager-section {padding: 140px 0 70px;}
+	.about-page-head > h2.sm-title {font-size: 40px;line-height: 50px;padding-bottom: 20px;}
+	.ms-abt-col > h4 {font-size: 24px;line-height: 33px;}
+	.about-lg-content > h2 {font-size: 28px;line-height: 40px;}
+	.album-col {margin-bottom: 60px;}
+	.option-set li {display: block;margin-right: 0;margin-bottom: 20px;}
+	.option-set li:last-child {margin-bottom: 0;}
+	.inp-block {margin-top: 370px;}
+	.cm-page-content > h2 {font-size: 40px;line-height: 40px;margin-bottom: 20px;}
+	.time-counter ul li {max-width: 100%;flex: 0 0 100%;margin-bottom: 30px;}
+	.time-counter ul li:before {display: none;}
+	.time-counter {margin-bottom: 50px;}
+	.coming-soon-page {padding-bottom: 50px;}
+	.tk-btn {margin-bottom: 50px;}
+	.testi-thumb {margin-right: 10px;padding-bottom: 10px;}
+	.testi-thumb:before {height: calc(100% - 10px);}
+	.testi-lg-info > h3 {margin-bottom: 20px;}
+	.ld-text > h2 {font-size: 50px;line-height: 60px;}
+	.landing-footer {padding: 40px 0;}
+}
+
+
+
